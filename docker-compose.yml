@@ -1,0 +1,29 @@
+services:
+  pro_kosmos:
+    build: .
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Moscow
+      LOG_PATH: /app/data/pro_kosmos.log
+      DB_PATH: /app/data/seen.db
+
+      BOT_TOKEN: ${BOT_TOKEN}
+      TARGET_CHANNEL_ID: ${TARGET_CHANNEL_ID}
+      YC_API_KEY: ${YC_API_KEY}
+      YC_FOLDER_ID: ${YC_FOLDER_ID}
+
+      RUN_NOW: "0"
+
+      RSS_TIMEOUT: "12"
+      PAGE_TIMEOUT: "12"
+      YC_TIMEOUT: "60"
+
+      TG_PHOTO_TARGET_BYTES: "9437184"
+      MAX_ORIGINAL_BYTES: "26214400"
+      MAX_DIM: "1600"
+      CAPTION_LIMIT: "900"
+    volumes:
+      - data:/app/data
+
+volumes:
+  data: {}
