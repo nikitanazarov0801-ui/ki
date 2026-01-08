@@ -11,3 +11,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY pro_kosmos_bot.py /app/pro_kosmos_bot.py
 
 CMD ["python", "pro_kosmos_bot.py"]
+
