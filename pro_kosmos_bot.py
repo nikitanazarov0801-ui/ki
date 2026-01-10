@@ -605,7 +605,7 @@ def generate_post(c):
     src = (
         f"Заголовок: {c['title']}\n"
         f"Краткое описание: {c['summary']}\n"
-        f"Источник: {c['link']}\n"
+        f"Источник:" {c['link']}\n
     )
 
     instr = (
@@ -771,3 +771,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
